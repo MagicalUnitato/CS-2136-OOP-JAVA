@@ -10,7 +10,7 @@ import java.io.InputStreamReader;
 
 /**
  *
- * @author skull
+ * @author Bryce Philbert M. Salvador
  */
 public class enroll {
     InputStreamReader isr = new InputStreamReader(System.in);  

@@ -5,7 +5,7 @@ import java.io.InputStreamReader;
 
 /**
  *
- * @author Bryce Philbert Murphy Salvador
+ * @author Bryce Philbert M. Salvador
  */
 public class students {
     InputStreamReader isr = new InputStreamReader(System.in);  

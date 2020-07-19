@@ -3,7 +3,7 @@ import java.io.*;
 import java.util.*; 
 /**
  *
- * @author skull
+ * @author Bryce Philbert M. Salvador
  */
 public class ProgExer2 {
     InputStreamReader isr = new InputStreamReader(System.in);  
