@@ -20,6 +20,7 @@ public class grades {
     int prelim;
     int midterm;
     int prefinal;
+    int finalgrade = 0;
 
     public void grades(int id,String subjectCode,int prelim, int midterm, int prefinal) {
         this.id = id;
@@ -41,6 +42,7 @@ public class grades {
             System.out.println("Enter Pre Final: ");
             int prefinal = Integer.parseInt(br.readLine());
             grades(id,subjectCode,prelim,midterm,prefinal);
+            this.finalgrade = (prelim + midterm + prefinal) / 3;
         }catch(Exception e){
             System.out.println("Exception : " + e );
         }

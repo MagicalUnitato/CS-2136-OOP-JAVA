@@ -12,6 +12,7 @@ public class ProgExer2 {
     int numSubs = 0;
     int numEnrol = 0;
     int numGrades = 0;
+    int numInputGrades = 0;
     students[] newStudList = new students[10];
     subjects[] newSubList = new subjects[10];
     enroll[] newEnrolList = new enroll[10];
@@ -35,14 +36,20 @@ public class ProgExer2 {
                     x.numSubs++;
                     break;
                 case 3:
+                    x.newGradeList[x.numGrades] = new grades();
+                    x.newGradeList[x.numGrades].id = 0;
+                    x.newGradeList[x.numGrades].subjectCode = "0";
+                    x.newGradeList[x.numGrades].prelim = 0;
+                    x.newGradeList[x.numGrades].midterm = 0;
+                    x.newGradeList[x.numGrades].prefinal = 0;
                     x.newEnrolList[x.numEnrol] = new enroll();
                     x.newEnrolList[x.numEnrol].enterEnroll();
                     x.numEnrol++;
+                    x.numGrades++;
                     break;
                 case 4:
-                    x.newGradeList[x.numGrades] = new grades();
-                    x.newGradeList[x.numGrades].enterGrades();
-                    x.numGrades++;
+                    x.newGradeList[x.numInputGrades].enterGrades();
+                    x.numInputGrades++;
                     break;
                 case 5:
                     x.summary();
@@ -58,11 +65,7 @@ public class ProgExer2 {
     }
     public int menu() {
         int num = 0;
-        System.out.println("numStud, numSubs & numEnroll Values : "+ numStud + " " + numSubs + " "+ numEnrol);
-        //System.out.println(Arrays.toString(newStudList));
-        //System.out.println(Arrays.toString(newSubList));
-        //System.out.println(Arrays.toString(newEnrolList));
-        //System.out.println(Arrays.toString(newGradeList));
+        System.out.println(" ");
         System.out.println("Menu");
         System.out.println("[1] New student");
         System.out.println("[2] New subject");
@@ -80,8 +83,6 @@ public class ProgExer2 {
     }
     public void summary(){
         try{
-            
-            String sGrade = "placeholder";
             System.out.println("Enter Student ID : ");
             int id = Integer.parseInt(br.readLine());
             System.out.println("---Summary---");
@@ -89,6 +90,9 @@ public class ProgExer2 {
                 if(id == newStudList[i].id){
                     System.out.println("Student ID: " + newStudList[i].id);
                     System.out.println("Student Name: " + newStudList[i].Name);
+                    System.out.println("Student Course: " + newStudList[i].Course);
+                    System.out.println("Student Gender: " + newStudList[i].Gender);
+                    System.out.println("Student Year Level: " + newStudList[i].YearLevel);
                     break;
                 }
             }
@@ -97,19 +101,22 @@ public class ProgExer2 {
             //System.out.printf("%-10s %-25s %-10s %-10s\n",b[x].Code, b[x].Description, b[x].Units, b[x].Schedule);
             for(int i = 0; i < numEnrol; i++){ 
                 if(id == newEnrolList[i].id){
-                    for(int x = 0; x < numSubs; x++){
-                        int average = 0;
-                        if(newEnrolList[i].subjectCode.equals(newSubList[x].Code) == true){
-                            if(newEnrolList[i].subjectCode.equals(newGradeList[x].subjectCode) == true && id == newEnrolList[i].id){
-                                average = (newGradeList[x].prelim + newGradeList[x].midterm + newGradeList[x].prefinal) / 3; 
-                                sGrade = Integer.toString(average);
-                            }else{
-                                sGrade = "---";
-                            }
-                            System.out.printf("%-10s %-25s %-10s %-10s %-10s\n",newSubList[x].Code, newSubList[x].Description, newSubList[x].Units, newSubList[x].Schedule, sGrade);
+                    System.out.printf("%-10s",newSubList[i].Code);
+                    //for(int x = 0; x < numEnrol; x++){
+                    System.out.printf("%-25s %-10s %-10s",newSubList[i].Description , newSubList[i].Units , newSubList[i].Schedule);
+                    //}
+                    for(int y = 0; y < numGrades; y++){
+                        if(newEnrolList[i].subjectCode.equals(newGradeList[y].subjectCode)){
+                            System.out.printf("%-10s",newGradeList[y].finalgrade);
+                            System.out.println(" ");
+                            break;
+                        }else if(newGradeList[y].subjectCode.equals("0")){
+                            System.out.printf("%-10s","---");
+                            System.out.println(" ");
                         }
                     }
                 }
+                
             }
         }catch(Exception e){
             System.out.println(e);
