@@ -37,11 +37,12 @@ public class ProgExer2 {
                     break;
                 case 3:
                     x.newGradeList[x.numGrades] = new grades();
-                    x.newGradeList[x.numGrades].id = 0;
-                    x.newGradeList[x.numGrades].subjectCode = "0";
-                    x.newGradeList[x.numGrades].prelim = 0;
-                    x.newGradeList[x.numGrades].midterm = 0;
-                    x.newGradeList[x.numGrades].prefinal = 0;
+                    x.newGradeList[x.numGrades].grades();
+                    //x.newGradeList[x.numGrades].id = 0;
+                    //x.newGradeList[x.numGrades].subjectCode = "0";
+                    //x.newGradeList[x.numGrades].prelim = 0;
+                    //x.newGradeList[x.numGrades].midterm = 0;
+                    //x.newGradeList[x.numGrades].prefinal = 0;
                     x.newEnrolList[x.numEnrol] = new enroll();
                     x.newEnrolList[x.numEnrol].enterEnroll();
                     x.numEnrol++;
@@ -63,22 +64,30 @@ public class ProgExer2 {
                     int y = 0;
                     int z = 0;
                     int i = 0;
+                    System.out.println("STUDENT ARRAY");
                     while(o != x.numStud){
                         System.out.println(x.newStudList[o].id + x.newStudList[o].Name +x.newStudList[o].Course +x.newStudList[o].Gender +x.newStudList[o].YearLevel);
                         o++;
                     }
+                    System.out.println("---END STUDENT ARRAY---");
+                    System.out.println("SUBJECT ARRAY");
                     while(y != x.numSubs){
                         System.out.println(x.newSubList[y].Code + x.newSubList[y].Description);
                         y++;
                     }
+                     System.out.println("---END SUBJECT ARRAY---");
+                    System.out.println("ENROL ARRAY");
                     while(z != x.numEnrol){
                         System.out.println(x.newEnrolList[z].id + x.newEnrolList[z].subjectCode);
                         z++;
                     }
+                     System.out.println("---END ENROL ARRAY---");
+                    System.out.println("GRADES ARRAY");
                     while(i != x.numGrades){
                         System.out.println(x.newGradeList[i].id + x.newGradeList[i].subjectCode);
                         i++;
                     }
+                     System.out.println("---END GRADES ARRAY---");
                     break;
                 case 8:
                     System.out.println("stud"+x.numStud);
@@ -130,18 +139,21 @@ public class ProgExer2 {
             //System.out.printf("%-10s %-25s %-10s %-10s\n",b[x].Code, b[x].Description, b[x].Units, b[x].Schedule);
             for(int i = 0; i < numEnrol; i++){ 
                 if(id == newEnrolList[i].id){
-                    System.out.printf("%-10s",newSubList[i].Code);
-                    //for(int x = 0; x < numEnrol; x++){
-                    System.out.printf("%-25s %-10s %-10s",newSubList[i].Description , newSubList[i].Units , newSubList[i].Schedule);
-                    //}
+                    for(int x = 0; x < numSubs; x++){
+                        if(newEnrolList[i].subjectCode.equals(newSubList[x].Code)){
+                            System.out.printf("%-10s",newSubList[x].Code);
+                            System.out.printf("%-25s %-10s %-10s",newSubList[x].Description , newSubList[x].Units , newSubList[x].Schedule);
+                        }
+                    }
                     for(int y = 0; y < numGrades; y++){
                         if(newEnrolList[i].subjectCode.equals(newGradeList[y].subjectCode)){
                             System.out.printf("%-10s",newGradeList[y].finalgrade);
                             System.out.println(" ");
                             break;
-                        }else if(newGradeList[y].subjectCode.equals("0")){
+                        }else if(newGradeList[y].subjectCode.equals("-empty-")){
                             System.out.printf("%-10s","---");
                             System.out.println(" ");
+                            break;
                         }
                     }
                 }

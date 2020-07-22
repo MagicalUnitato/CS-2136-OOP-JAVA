@@ -22,6 +22,14 @@ public class grades {
     int prefinal;
     int finalgrade = 0;
 
+    public void grades() {
+        this.id = 0;
+        this.subjectCode = "-empty-";
+        this.prelim = 0;
+        this.midterm = 0;
+        this.prefinal = 0;
+    }
+
     public void grades(int id,String subjectCode,int prelim, int midterm, int prefinal) {
         this.id = id;
         this.subjectCode = subjectCode;
