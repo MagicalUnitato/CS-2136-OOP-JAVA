@@ -146,7 +146,7 @@ public class ProgExer2 {
                         }
                     }
                     for(int y = 0; y < numGrades; y++){
-                        if(newEnrolList[i].subjectCode.equals(newGradeList[y].subjectCode)){
+                        if(newEnrolList[i].subjectCode.equals(newGradeList[y].subjectCode) && newEnrolList[i].id == newGradeList[y].id){
                             System.out.printf("%-10s",newGradeList[y].finalgrade);
                             System.out.println(" ");
                             break;
