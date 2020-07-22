@@ -58,6 +58,35 @@ public class ProgExer2 {
                     selection = false;
                     System.out.println("Thank you for your input");
                     break;
+                case 7:
+                    int o = 0;
+                    int y = 0;
+                    int z = 0;
+                    int i = 0;
+                    while(o != x.numStud){
+                        System.out.println(x.newStudList[o].id + x.newStudList[o].Name +x.newStudList[o].Course +x.newStudList[o].Gender +x.newStudList[o].YearLevel);
+                        o++;
+                    }
+                    while(y != x.numSubs){
+                        System.out.println(x.newSubList[y].Code + x.newSubList[y].Description);
+                        y++;
+                    }
+                    while(z != x.numEnrol){
+                        System.out.println(x.newEnrolList[z].id + x.newEnrolList[z].subjectCode);
+                        z++;
+                    }
+                    while(i != x.numGrades){
+                        System.out.println(x.newGradeList[i].id + x.newGradeList[i].subjectCode);
+                        i++;
+                    }
+                    break;
+                case 8:
+                    System.out.println("stud"+x.numStud);
+                    System.out.println("subs"+x.numSubs);
+                    System.out.println("Enrol"+x.numEnrol);
+                    System.out.println("Grades"+x.numGrades);
+                    System.out.println("input grades"+x.numInputGrades);
+                    break;
                 default:
                     System.out.println("Please Enter A Valid Number");
             }
