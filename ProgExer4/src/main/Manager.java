@@ -9,6 +9,9 @@ package main;
  *
  * @author Bryce Philbert M. Salvador <bpmsalvador at addu.edu.ph>
  */
-public class Manager {
-    
+public class Manager extends RegularSalary{
+    double basicpay = 20000.00;
+    public double getbasicpay(){
+        return basicpay;
+    }
 }

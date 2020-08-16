@@ -9,6 +9,12 @@ package main;
  *
  * @author Bryce Philbert M. Salvador <bpmsalvador at addu.edu.ph>
  */
-public class PartTime {
+public class PartTime extends HourlySalary{
+    double hourlypay = 250.00;
     
+    public double getbasicpay(int hours){
+        double basicpay;
+        basicpay = hours * hourlypay;
+        return basicpay;
+    }
 }

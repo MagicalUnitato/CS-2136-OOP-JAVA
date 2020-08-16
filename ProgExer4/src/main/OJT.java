@@ -9,6 +9,6 @@ package main;
  *
  * @author Bryce Philbert M. Salvador <bpmsalvador at addu.edu.ph>
  */
-public class OJT {
+public class OJT extends Company{
     
 }
