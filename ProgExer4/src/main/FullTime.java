@@ -10,5 +10,11 @@ package main;
  * @author Bryce Philbert M. Salvador <bpmsalvador at addu.edu.ph>
  */
 public class FullTime extends HourlySalary{
+    double hourlypay = 500.00;
     
+    public double getBasicpay(int hours){
+        double basicpay;
+        basicpay = hours * hourlypay;
+        return basicpay;
+    }
 }

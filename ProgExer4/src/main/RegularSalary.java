@@ -10,5 +10,14 @@ package main;
  * @author Bryce Philbert M. Salvador <bpmsalvador at addu.edu.ph>
  */
 public class RegularSalary extends Employee{
+    double clothingallowance = 2000.00;
+    double vehicleallowance = 5000.00;
+    double foodallowance = 1000.00;
     
+    public double getregularbenefits(){
+        double regularbenefits;
+        regularbenefits = clothingallowance + vehicleallowance + foodallowance;
+        return regularbenefits;
+        
+    }
 }

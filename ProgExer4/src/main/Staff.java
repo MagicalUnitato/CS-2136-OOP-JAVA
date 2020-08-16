@@ -9,6 +9,12 @@ package main;
  *
  * @author Bryce Philbert M. Salvador <bpmsalvador at addu.edu.ph>
  */
-public class Staff extends RegularSalary{
+public class Staff extends RegularSalary {
+    double basicpay = 15000.00;
+
+    public double getBasicpay() {
+        return basicpay;
+    }
+    
     
 }

@@ -14,29 +14,38 @@ public class Company {
     static String Caddress;
     static String Ccontact;
     static String Cemail;
+
+    public static String getCname() {
+        return Cname;
+    }
+
+    public static void setCname(String Cname) {
+        Company.Cname = Cname;
+    }
+
+    public static String getCaddress() {
+        return Caddress;
+    }
+
+    public static void setCaddress(String Caddress) {
+        Company.Caddress = Caddress;
+    }
+
+    public static String getCcontact() {
+        return Ccontact;
+    }
+
+    public static void setCcontact(String Ccontact) {
+        Company.Ccontact = Ccontact;
+    }
+
+    public static String getCemail() {
+        return Cemail;
+    }
+
+    public static void setCemail(String Cemail) {
+        Company.Cemail = Cemail;
+    }
     
-    public void updateName(String newn){
-        Cname = newn;
-    }
-    public String showCname(){
-        return this.Cname;
-    }
-    public void updateAddress(String newad){
-        Caddress = newad;
-    }
-    public String showAddress(){
-        return this.Caddress;
-    }
-    public void updateContact(String newcont){
-        Ccontact = newcont;
-    }
-    public String showContact(){
-        return this.Ccontact;
-    }
-    public void updateEmail(String newem){
-        Cemail = newem;
-    }
-    public String showEmail(){
-        return this.Cemail;
-    }
+
 }
