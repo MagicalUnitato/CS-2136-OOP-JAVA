@@ -29,6 +29,7 @@ public class Employee extends Company{
         System.out.println("PagIbig: " + PagIbig);
         System.out.println("Tax: " + Tax);
         deductions = SSS + Philhealth + PagIbig + Tax;
+        System.out.println("Deductions: " + deductions);
         return deductions;
     }
 

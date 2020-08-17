@@ -12,7 +12,7 @@ package main;
 public class FullTime extends HourlySalary{
     double hourlypay = 500.00;
     
-    public double getBasicpay(int hours){
+    public double getbasicpay(int hours){
         double basicpay;
         basicpay = hours * hourlypay;
         return basicpay;

@@ -12,7 +12,7 @@ package main;
 public class Staff extends RegularSalary {
     double basicpay = 15000.00;
 
-    public double getBasicpay() {
+    public double getbasicpay() {
         return basicpay;
     }
     
