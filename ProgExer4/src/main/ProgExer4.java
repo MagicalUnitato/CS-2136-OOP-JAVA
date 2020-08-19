@@ -17,6 +17,7 @@ public class ProgExer4 {
     public static void main(String[] args) {
         ProgExer4 x = new ProgExer4();
         Company newCompany = new Company();
+        boolean exit = true;
         int value = 0;
         int xValue = 0;
         try{
@@ -35,7 +36,7 @@ public class ProgExer4 {
             //x.newStudList[x.numStud] = new students();
             //x.newStudList[x.numStud].studentInput();
             //x.numStud++;
-            while(true){
+            while(exit){
                 value = x.menu();
                 switch(value){
                     case 1: 
@@ -123,6 +124,9 @@ public class ProgExer4 {
                     case 3:
                         x.payslip();
                         break;
+                    case 4:
+                        exit = false;
+                        break;
                     default:
                         System.out.println("Please Enter A Valid Number");
                 }
@@ -155,6 +159,7 @@ public class ProgExer4 {
         System.out.println("[1] New employee");
         System.out.println("[2] New OJT");
         System.out.println("[3] Payslip");
+        System.out.println("[4] Exit");
         System.out.println("Select: ");
         try{
             num = Integer.parseInt(br.readLine());
