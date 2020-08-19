@@ -19,7 +19,7 @@ public class Employee extends Company{
     static Double SSS = 100.00;
     static Double Philhealth = 100.00;
     static Double PagIbig = 100.00;
-    static Double Tax = 100.00;
+    static Double Tax = 1000.00;
     
     public double getDeductions(){
         double deductions;
