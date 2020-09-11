@@ -8,17 +8,19 @@ import java.util.*;
 public class ProgExer2 {
     InputStreamReader isr = new InputStreamReader(System.in);  
     BufferedReader br = new BufferedReader(isr);
-    int numStud = 0;
+    
     int numSubs = 0;
     int numEnrol = 0;
     int numGrades = 0;
     int numInputGrades = 0;
-    students[] newStudList = new students[10];
+    
     subjects[] newSubList = new subjects[10];
     enroll[] newEnrolList = new enroll[10];
     grades[] newGradeList = new grades[10];
     public static void main(String[] args) {
-        ProgExer2 x = new ProgExer2();
+        GUI a = new GUI();
+        a.setVisible(true);
+        /*ProgExer2 x = new ProgExer2();
 
         int value = 0;
         boolean selection = true;
@@ -75,7 +77,7 @@ public class ProgExer2 {
                         System.out.println(x.newSubList[y].Code + x.newSubList[y].Description);
                         y++;
                     }
-                     System.out.println("---END SUBJECT ARRAY---");
+                    System.out.println("---END SUBJECT ARRAY---");
                     System.out.println("ENROL ARRAY");
                     while(z != x.numEnrol){
                         System.out.println(x.newEnrolList[z].id + x.newEnrolList[z].subjectCode);
@@ -100,24 +102,6 @@ public class ProgExer2 {
                     System.out.println("Please Enter A Valid Number");
             }
         }
-    }
-    public int menu() {
-        int num = 0;
-        System.out.println(" ");
-        System.out.println("Menu");
-        System.out.println("[1] New student");
-        System.out.println("[2] New subject");
-        System.out.println("[3] Enroll a student");
-        System.out.println("[4] Encode grades");
-        System.out.println("[5] Summary");
-        System.out.println("[6] Exit");
-        System.out.println("Select: ");
-        try{
-            num = Integer.parseInt(br.readLine());
-        } catch(Exception e){
-            System.out.println("Exception: " + e);
-        }
-        return num;
     }
     public void summary(){
         try{
@@ -161,6 +145,6 @@ public class ProgExer2 {
             }
         }catch(Exception e){
             System.out.println(e);
-        }
+        }*/
     }
 }
