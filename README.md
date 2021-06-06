@@ -8,7 +8,7 @@ Lam nyo naman ata kung pano i copy ang code HAHAHAH no leakz pls
 
 ### Prerequisites
 
-Any IDE you like oi, i don't judge (netbeans ftw)
+Any IDE you like oi, i don't judge (netbeans ftw) (but im a changed man now so INTELLIJ BEYBI)
 
 ## Built With
 
